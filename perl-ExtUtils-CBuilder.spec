@@ -1,7 +1,7 @@
 %define	module	ExtUtils-CBuilder
 %define	name	perl-%{module}
-%define	version	0.18
-%define	release	%mkrel 2
+%define	version	0.19
+%define	release	%mkrel 1
 
 Name:		%{name}
 Version:	%{version}

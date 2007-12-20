@@ -19,6 +19,7 @@ BuildRequires:	perl(File::Spec)
 BuildRequires:	perl(Test)
 BuildRequires:	perl(Text::ParseWords)
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module can build the C portions of Perl modules by invoking the

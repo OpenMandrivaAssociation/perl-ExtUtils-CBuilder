@@ -1,19 +1,14 @@
-%define	module	ExtUtils-CBuilder
-%define	name	perl-%{module}
-%define	version	0.24
-%define	release	%mkrel 4
+%define upstream_name  	    ExtUtils-CBuilder
+%define upstream_version    0.25
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 Summary:	Compile and link C code for Perl modules 
 License:	GPL or Artistic
 Group:		Development/Perl
-Source:		http://search.cpan.org/CPAN/authors/id/K/KW/KWILLIAMS/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source:     http://www.cpan.org/modules/by-module/ExtUtils/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires:	perl(File::Basename)
 BuildRequires:	perl(File::Spec)
 BuildRequires:	perl(Test)
@@ -29,7 +24,7 @@ However, it is not intended as a general cross-platform interface to all your C
 building needs. That would have been a much more ambitious goal!
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor

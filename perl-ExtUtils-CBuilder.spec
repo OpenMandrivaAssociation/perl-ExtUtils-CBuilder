@@ -1,5 +1,5 @@
 %define upstream_name  	    ExtUtils-CBuilder
-%define upstream_version 0.27
+%define upstream_version 0.2701
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}

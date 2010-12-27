@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 Summary:	Compile and link C code for Perl modules 
 License:	GPL or Artistic
 Group:		Development/Perl
@@ -36,6 +36,9 @@ make test
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+for m in ExtUtils::CBuilder.3pm ExtUtils::CBuilder::Platform::Windows.3pm; do
+	rm -f %{buildroot}%{_mandir}/man3/$m
+done
 
 %clean 
 rm -rf %{buildroot}
@@ -44,5 +47,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc Changes INSTALL
 %{perl_vendorlib}/ExtUtils
-%{_mandir}/*/*
-

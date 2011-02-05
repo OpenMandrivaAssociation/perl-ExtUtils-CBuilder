@@ -1,5 +1,5 @@
 %define upstream_name  	    ExtUtils-CBuilder
-%define upstream_version 0.2802
+%define upstream_version 0.280202
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -45,5 +45,5 @@ rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
-%doc Changes INSTALL
+%doc Changes
 %{perl_vendorlib}/ExtUtils

@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Release:	7
 Summary:	Compile and link C code for Perl modules 
 License:	GPL or Artistic
 Group:		Development/Perl

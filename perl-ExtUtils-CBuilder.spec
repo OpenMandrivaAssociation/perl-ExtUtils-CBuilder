@@ -4,7 +4,7 @@
 Summary:	Compile and link C code for Perl modules 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	10
+Release:	11
 License:	GPL or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}

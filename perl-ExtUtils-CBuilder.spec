@@ -1,14 +1,14 @@
 %define modname	ExtUtils-CBuilder
-%define modver	0.280202
+%define modver 0.280205
 
 Summary:	Compile and link C code for Perl modules 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	11
+Release:	1
 License:	GPL or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/ExtUtils/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/ExtUtils/ExtUtils-CBuilder-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(File::Basename)
 BuildRequires:	perl(File::Spec)
@@ -42,4 +42,5 @@ done
 %files 
 %doc Changes
 %{perl_vendorlib}/ExtUtils
+
 
